@@ -805,7 +805,7 @@ ${วเลสSec}\n
 	return `
 	<html>
 	${htmlHead}
-	<body class="bg-dark d-flex justify-content-center">
+	<body class="bg-dark justify-content-center">
 		<main>
 			<div style='background-color: transparent; border: none;'>${header}</div>
 			<pre class="text-center text-light">${output1}</pre>
