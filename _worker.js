@@ -778,7 +778,7 @@ ${วเลสSec}\n
 		main {
 			max-width: 640px;
 			padding: 15px 20px;
-			margin: 0;
+			margin: 0 auto;
 			background-color: #666;
 			border-radius: 30px;
 		}
@@ -793,7 +793,7 @@ ${วเลสSec}\n
 			border-radius: 15px;
 			color: #000;
 			padding: 5px 10px;
-			margin: 3px 0;
+			margin: 0;
 		}
 		</style>
 		<!-- Add FontAwesome library -->
