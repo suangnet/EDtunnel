@@ -708,14 +708,14 @@ function getวเลสConfig(userIDs, hostName) {
 	// Prepare output string for each userID
 	const output1 = userIDArray.map((userID) => {
 		const วเลสMain = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPart;
-		return `<br /><h5>Vless443</h5>--------------\n
+		return `<br /><h5>VLESS TLS</h5>--------------\n
 ${วเลสMain}\n
 <button class="border border-3 border-success rounded-4 fw-bold" style="width: 180px; height: 30px;" onclick='copyToClipboard("${วเลสMain}")'><i>Copy Vless 443</i></button>
 <br />`;
 	}).join('\n');
 	const output2 = userIDArray.map((userID) => {
 		const วเลสSec = atob(pt) + '://' + userID + atob(at) + hostName + commonUrlPart1;
-		return `<br /><h5>Vless80</h5>----------------\n
+		return `<br /><h5>VLESS nTLS</h5>----------------\n
 ${วเลสSec}\n
 <button class="border border-3 border-success rounded-4 fw-bold" style="width: 180px; height: 30px;" onclick='copyToClipboard("${วเลสSec}")'><i>Copy Vless 80</i></button>
 <br />`;
@@ -756,7 +756,7 @@ ${วเลสSec}\n
 	<meta property='og:image:height' content='1500' />
 
 	<style>
-	p{
+	p {
 		font-size: 19px;
 		color: red;
 		animation-name: textzoom;
@@ -791,6 +791,7 @@ ${วเลสSec}\n
 	  white-space: pre-wrap;
 	  word-wrap: break-word;
 	  border: 2px solid green;
+	  border-radius: 15px;
 	  color: #000;
 	  padding: 6px;
 	  margin: 3px 0;
@@ -826,7 +827,7 @@ ${วเลสSec}\n
 		var namaTahun = [ "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember" ];
 		var namaHari = [ "Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu" ];
 		var hari_ini = new Date();
-		document.getElementById('Date').innerHTML = (namaHari[hari_ini.getDay()] + ", " + hari_ini.getDate()+ '-' + namaTahun[hari_ini.getMonth()] + '-' +hari_ini.getFullYear());
+		document.getElementById('Date').innerHTML = (namaHari[hari_ini.getDay()] + ", " + hari_ini.getDate()+ ' ' + namaTahun[hari_ini.getMonth()] + ' ' +hari_ini.getFullYear());
 		var h = hari_ini.getHours();
 		var m = hari_ini.getMinutes();
 		var s = hari_ini.getUTCSeconds();
