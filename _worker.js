@@ -476,7 +476,6 @@ function processวเลสHeader(วเลสBuffer, userID) {
 	};
 }
 
-
 /**
  * Converts a remote socket to a WebSocket connection.
  * @param {import("@cloudflare/workers-types").Socket} remoteSocket The remote socket to convert.
@@ -615,7 +614,6 @@ function stringify(arr, offset = 0) {
 	return uuid;
 }
 
-
 /**
  * Handles outbound UDP traffic by transforming the data into DNS queries and sending them over a WebSocket connection.
  * @param {import("@cloudflare/workers-types").WebSocket} webSocket The WebSocket connection to send the DNS queries over.
@@ -701,7 +699,7 @@ const ed = 'RUR0dW5uZWw=';
 function getวเลสConfig(userIDs, hostName) {
 	const commonUrlPart = `:443?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=/vlesscf#${hostName}`;
 	const commonUrlPart1 = `:80?encryption=none&security=none&fp=randomized&type=ws&host=${hostName}&path=/vlesscf#${hostName}`;
-	
+
 	// Split the userIDs into an array
 	const userIDArray = userIDs.split(",");
 
@@ -781,7 +779,12 @@ ${วเลสSec}\n
 	  color: #fff;
 	  padding: 15px;
 	}
-
+	main {
+	  max-width: 640px;
+	  padding: 15px 20px;
+	  margin: 0;
+	  background-color: #777;
+	}
 	img {
 	  max-width: 100%;
 	  height: auto;
@@ -809,9 +812,11 @@ ${วเลสSec}\n
   <html>
   ${htmlHead}
   <body class="bg-dark">
-  <div style='background-color: transparent; border: none;'>${header}</div>
-  <pre class="text-center text-light">${output1}</pre>
-  <pre class="text-center text-light">${output2}</pre>
+	<main>
+		<div style='background-color: transparent; border: none;'>${header}</div>
+		<pre class="text-center text-light">${output1}</pre>
+		<pre class="text-center text-light">${output2}</pre>
+	</main>
   </body>
   <script>
 	function copyToClipboard(text) {
